@@ -183,7 +183,7 @@ const fmt=n=>Number(n).toLocaleString('pt-BR');
 const km1=n=>Number(n).toFixed(1).replace('.',',');
 let scope='muni', curNasc=null;
 const active={Alta:true,'Média':true,Baixa:true};
-const map=L.map('map',{zoomControl:true});
+const map=L.map('map',{zoomControl:true}).setView([-19.86,-44.44],12);
 const sat=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Esri, Maxar, Earthstar Geographics'});
 const topo=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'});
 sat.addTo(map);
